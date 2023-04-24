@@ -1,6 +1,6 @@
 package collections;
 
-public class Employee {
+public class Employee  implements Comparable{
     String name;
     int id;
     float salary;
@@ -13,9 +13,15 @@ public class Employee {
 
 public void display(){
     System.out.println("Empolyee name "+name);
-    System.out.println("Empolyee id" +id);
-    System.out.println("Empolyee salary " +salary);
+   // System.out.println("Empolyee id" +id);
+   // System.out.println("Empolyee salary " +salary);
 }
 
+    @Override
+    public int compareTo(Object o) {
+        Employee em = (Employee) o;
+                int namediff = name.compareToIgnoreCase(em.name);
+        return namediff;
+    }
 }
 

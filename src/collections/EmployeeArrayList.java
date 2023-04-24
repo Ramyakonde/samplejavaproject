@@ -1,5 +1,6 @@
 package collections;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class EmployeeArrayList {
@@ -16,6 +17,8 @@ public class EmployeeArrayList {
        list.add(1,emp2);
        list.add(2,emp3);
        list.add(3,emp4);
+        Collections.sort(list);
+        System.out.println(list);
         list.set(1,emp4);
         for (Employee obj : list) {
             obj.display();
